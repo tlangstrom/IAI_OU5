@@ -29,7 +29,7 @@ def show_scatter(x,y):
     plt.show()
 
 def get_ground_level(pcd):
-    return 64
+    z_values = pcd[:, 2]
 
 
 #%% read file containing point cloud data
