@@ -38,7 +38,7 @@ pcd = np.load("dataset1.npy")
 pcd.shape
 
 #%% show downsampled data in external window
-%matplotlib qt
+# %matplotlib qt
 show_cloud(pcd)
 #show_cloud(pcd[::10]) # keep every 10th point
 
