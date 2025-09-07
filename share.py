@@ -31,7 +31,8 @@ def show_scatter(x,y):
 def get_ground_level(pcd):
     z_values = pcd[:, 2]
     hist, bin_edges = np.histogram(z_values, bins=200)
-
+    peak_index = np.argmax(hist)
+    
 #%% read file containing point cloud data
 pcd = np.load("dataset1.npy")
 
