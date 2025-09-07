@@ -44,7 +44,7 @@ pcd2 = np.load("dataset2.npy")
 pcd.shape
 
 #%% show downsampled data in external window
-# %matplotlib qt
+%matplotlib qt
 show_cloud(pcd)
 #show_cloud(pcd[::10]) # keep every 10th point
 
@@ -66,7 +66,6 @@ est_ground_level = get_ground_level(pcd)
 print(est_ground_level)
 est_ground_level2 = get_ground_level(pcd2)
 print(est_ground_level2)
-
 pcd_above_ground = pcd[pcd[:,2] > est_ground_level] 
 #%%
 pcd_above_ground.shape
