@@ -37,7 +37,7 @@ def get_ground_level(pcd):
     return ground_level
 #%% read file containing point cloud data
 pcd = np.load("dataset1.npy")
-
+pcd2 = np.load("dataset2.npy")
 pcd.shape
 
 #%% show downsampled data in external window
@@ -61,6 +61,8 @@ Add the histogram plots to your project readme
 '''
 est_ground_level = get_ground_level(pcd)
 print(est_ground_level)
+est_ground_level2 = get_ground_level(pcd2)
+print(est_ground_level2)
 
 pcd_above_ground = pcd[pcd[:,2] > est_ground_level] 
 #%%
