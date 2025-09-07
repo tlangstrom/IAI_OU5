@@ -34,6 +34,9 @@ def get_ground_level(pcd):
     peak_index = np.argmax(hist)
     ground_level = bin_edges[peak_index]
     
+    plt.hist(z_values, bins=200)
+    plt.show()
+
     return ground_level
 #%% read file containing point cloud data
 pcd = np.load("dataset1.npy")
